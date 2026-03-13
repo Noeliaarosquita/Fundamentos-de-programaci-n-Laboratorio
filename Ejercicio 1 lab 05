@@ -12,7 +12,7 @@ int main()
     printf("Ingrese el valor de la altura (h) : ");
     scanf ("%f", &altura);
 
-    //Validación mediante condicionales IF
+    //ValidaciÃ³n mediante condicionales IF
     if (radio <= 0 || altura <= 0) {
         //Si cualquiera de los dos es 0 o negativo, mostramos
         printf("\nERROR: El resultado y la altura deben ser mayores a cero.\n");
@@ -27,7 +27,7 @@ int main()
      printf("Radio ingresado: %.2f\n", radio);
      printf("Altura ingresada: %.2f\n", altura);
      printf("----------------------------\n");
-     printf("Resultado del Área Lateral:  %4.f unidades cacluladas \n", area);
+     printf("Resultado del Ãrea Lateral:  %4.f unidades cacluladas \n", area);
      printf("Resultado del Volumen:    %.4f unidades cubicas \n", volumen);
      printf("Resultado del total:       %.4f total del area y volumen\n)", total);
 }
