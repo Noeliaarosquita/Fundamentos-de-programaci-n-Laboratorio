@@ -1,31 +1,35 @@
 #include <stdio.h>
-int main() {
-    float lab_1, lab_2, lab_3,examen_teorico,proyecto_final,promedio;
-    printf("---Promedio del estudiante---\n");
+#include <math.h>
 
+int main()
+{
+    float altura,radio,area,volumen,total;
+    const float pi= 3.14159;
+    printf("===CALCULO DE GEOMETRIA DEL CILINDRO==\n");
     //Entrada de datos
-    printf("Ingrese nota lab1: " );
-    scanf("%f",&lab_1);
-       printf("Ingrese nota lab2 " );
-    scanf("%f",&lab_2);
-       printf("Ingrese nota lab3: " );
-    scanf("%f",&lab_3);
+    printf("Ingrese el valor del radio (r):");
+    scanf("%f", &radio);
+    printf("Ingrese el valor de la altura (h) : ");
+    scanf ("%f", &altura);
 
-    printf("Ingrese la nota del examen teorico: ");
-    scanf("%f",&examen_teorico);
-    printf("Ingrese la nota del proyecto final");
-    scanf("%f",&proyecto_final);
-
-  promedio= (lab_1* 0.15)+(lab_2* 0.15)+(lab_3* 0.15)+(examen_teorico*0.35)+(proyecto_final*0.20);
-  printf("-----------------------------------\n");
-  printf("Tu promedio es: %.2f\n",promedio);
-  if (promedio>=51) {printf("felicidades aprobaste\n");}
-  else {printf("reprobaste\n");}
-  
-  
-  
-  return 0;
-
-
+    //Validación mediante condicionales IF
+    if (radio <= 0 || altura <= 0) {
+        //Si cualquiera de los dos es 0 o negativo, mostramos
+        printf("\nERROR: El resultado y la altura deben ser mayores a cero.\n");
+        printf("No se pueden realizar los calculos con valores invalidos.\n");
+        } else{
+     area = 2 * pi * radio * altura;
+     volumen= pi *pow(radio,2) *altura;
+     total= volumen * area;
+     //sALIDA DE RESULTADOS
+     printf("\nResultados calculados:\n");
+     printf("---------------------------\n");
+     printf("Radio ingresado: %.2f\n", radio);
+     printf("Altura ingresada: %.2f\n", altura);
+     printf("----------------------------\n");
+     printf("Resultado del Área Lateral:  %4.f unidades cacluladas \n", area);
+     printf("Resultado del Volumen:    %.4f unidades cubicas \n", volumen);
+     printf("Resultado del total:       %.4f total del area y volumen\n)", total);
 }
-
+     return 0;
+}
